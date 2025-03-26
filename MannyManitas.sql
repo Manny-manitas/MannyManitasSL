@@ -1,4 +1,5 @@
 
+
 create table ITEM (
 ItemID int identity primary key,
 Category varchar(50) not null,
@@ -36,7 +37,7 @@ CompanyID int not null,
 foreign key (CompanyID) references SUPPLIER(CompanyID))
 
 
-create table SUPLY (
+create table SUPPLY (
 SalesmanID int not null,
 ItemID int not null,
 Discount tinyint not null,
@@ -54,8 +55,32 @@ Email varchar(100) unique not null,
 check (Email like '_%@_%._%'))
 
 
-create table ORDER (
+create table ORDERS (
 OrderID int identity primary key,
 OrderDate datetime not null,
 Status varchar not null,
 ShippingID int not null)
+
+
+create table ORDER_DETAILS (
+OrderID int,
+ItemID int,
+Quantity int not null,
+Price smallmoney not null,
+ArrivalDate date not null,
+primary key(OrderID,ItemID),
+foreign key (ItemID) references ITEM(ItemID),
+foreign key (OrderID) references ORDERS(OrderID))
+
+
+create table SHIPPING_METHOD (
+OrderID int,
+Type varchar(50) not null,
+Year char(4) not null,
+Cost smallmoney not null,
+primary key(OrderID,Type),
+foreign key (OrderID) references ORDERS(OrderID),
+check (Year like '20[0-2][0-9]'))
+
+alter table ORDERS
+add CustomerID int foreign key (CustomerID) references CUSTOMER(CustomerID)
