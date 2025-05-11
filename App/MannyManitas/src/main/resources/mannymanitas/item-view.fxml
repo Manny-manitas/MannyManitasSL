@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<?import java.net.URL?>
+<VBox alignment="CENTER" prefHeight="600.0" prefWidth="800.0" spacing="20.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="mannymanitas.Item.ItemController">
+    <stylesheets>
+        <URL value="@styles.css" />
+    </stylesheets>
+    <padding>
+        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0"/>
+    </padding>
+
+    <TableView fx:id="tablaItems" prefHeight="400.0" prefWidth="760.0" styleClass="table-view">
+        <columns>
+            <TableColumn fx:id="itemIdTableView" prefWidth="150.0" text="ItemID"/>
+            <TableColumn fx:id="categoriaTableView" prefWidth="200.0" text="Category"/>
+            <TableColumn fx:id="nameItemTableView" prefWidth="200.0" text="NameItem"/>
+            <TableColumn fx:id="presioTableView" prefWidth="150.0" text="Price"/>
+        </columns>
+    </TableView>
+
+    <HBox alignment="CENTER" spacing="10.0" styleClass="hbox">
+        <TextField fx:id="filtroTextField" promptText="Filtrar..." styleClass="text-field"/>
+        <Button fx:id="filterButton" text="Filtrar" onAction="#filtrarButtonClick" styleClass="button"/>
+    </HBox>
+
+    <HBox alignment="CENTER" spacing="10.0" styleClass="hbox">
+        <TextField fx:id="itemIdTextField" promptText="ItemID" editable="false" styleClass="text-field"/>
+        <TextField fx:id="categoriaTextField" promptText="Category" styleClass="text-field"/>
+        <TextField fx:id="nameItemTextField" promptText="NameItem" styleClass="text-field"/>
+        <TextField fx:id="presioTextField" promptText="Price" styleClass="text-field"/>
+    </HBox>
+
+    <HBox alignment="CENTER" spacing="10.0" styleClass="hbox">
+        <Button fx:id="onAnyadirButtonClick" text="Añadir Item" onAction="#onAnyadirButton" styleClass="button"/>
+        <Button fx:id="editarButton" text="Editar" onAction="#editarButtonClick" styleClass="button"/>
+        <Button fx:id="guardarButton" text="Guardar Item" onAction="#guardarButtonClick" disable="true" styleClass="button"/>
+        <Button fx:id="eliminarButton" text="Eliminar" onAction="#eliminarButtonClick" styleClass="button"/>
+    </HBox>
+
+    <Label fx:id="errorLabel" textFill="red" styleClass="error-label"/>
+
+    <Button text="Volver a Página Principal" onAction="#volverAPaginaPrincipal" styleClass="button"/>
+</VBox>
