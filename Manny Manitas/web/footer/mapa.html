@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="es">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>
+			Manny Manitas S.L.
+		</title>
+		<link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css"/>
+  		<link rel="stylesheet" href="mapa.css"/>
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+		<link rel="icon" type="image/png" href="../img/Logo.png">
+	</head>
+<body>
+<header>
+	<a href="../Index.html" class="logo_page">
+		<img src="../img/Logo.png" alt="Logo Ferretería Manny Manitas" class="logo">
+		<h1>
+			Manny Manitas S.L.
+		</h1>
+	</a>
+	<div class="menu">
+		<a href="../ShoppingCart.html">
+			<img src="../img/ShoppingCart.png" class="sc_icon">
+		</a>
+		<a href="../Account.html">
+			Cuenta
+		</a>
+		<a href="../AboutUs.html">
+			Sobre Nosotros
+		</a>
+	</div>
+</header>
+
+  <main class="container">
+    <h2>¿Dónde estamos?</h2>
+    <div id="map"></div>
+  </main>
+
+  <footer>
+	<div class="footer-container">
+		<div class="footer-column">
+			<a href="FAQ.html">
+				FAQ
+			</a>
+			<a href="AvisoLegal.html">
+				Aviso legal
+			</a>
+			<a href="PoliticaPrivacidad.html">
+				Política de privacidad
+			</a>
+		</div>
+		<div class="footer-column">
+			<a href="PoliticaCookies.html">
+				Política de cookies
+			</a>
+			<a href="CondicionesUso.html">
+				Condiciones de uso
+			</a>
+			<a href="PoliticaEnvios.html">
+				Política de envíos
+			</a>
+		</div>
+		<div class="footer-column">
+			<a href="PoliticaDevoluciones.html">
+				Política de devoluciones
+			</a>
+			<a href="mapa.html">
+				Mapa del sitio
+			</a>
+		</div>
+	</div>
+	<p>
+		© 2025 Ferretería Manny Manitas S.L. - Todos los derechos reservados.
+	</p>
+</footer>
+
+  <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+  <script>
+    const map = L.map('map').setView([38.4073, -0.4454], 17);
+
+    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+      attribution: '© OpenStreetMap',
+    }).addTo(map);
+
+    L.marker([38.4073, -0.4454])
+      .addTo(map)
+      .bindPopup('Nuestra tienda<br>Carrer de Mondúver, 2A, Mutxamel')
+      .openPopup();
+  </script>
+
+</body>
+</html>

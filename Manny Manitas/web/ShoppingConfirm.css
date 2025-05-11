@@ -1,0 +1,217 @@
+body {
+    padding-top: 80px;
+    font-family: "Poppins", sans-serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    background-repeat: repeat;
+    background-size: auto;
+    background-position: top left;
+}
+
+.info-message {
+    width: 100%;
+    background: #ffcc00;
+    color: #000;
+    text-align: center;
+    font-size: 14px;
+    padding: 5px 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1100;
+}
+
+header {
+    position: fixed;
+    top: 30px;
+    left: 0;
+    height: 3%;
+    width: 100%;
+    background: #fff;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    padding: 20px 20px;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+}
+
+.logo {
+    max-width: 100px;
+    max-height: 40px;
+    margin-right: 10px;
+}
+
+.logo_page {
+    text-decoration: none;
+    color: #000;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 3px;
+}
+
+header h1 {
+    margin: 0;
+    margin-right: 10px;
+    font-weight: 400;
+    font-size: 24px;
+    white-space: nowrap;
+}
+
+header .menu {
+    height: 3%;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    margin-left: auto;
+    margin-right: 50px;
+}
+
+.menu > a {
+    color: black;
+    text-decoration: none;
+    font-weight: 500;
+    margin-left: 30px;
+}
+
+.menu > a:hover {
+    color: black;
+    text-decoration: underline;
+    font-weight: 500;
+    margin-left: 30px;
+}
+
+.container {
+    margin-top: 80px;
+    padding: 50px;
+    text-align: center;
+    background-color: #ffcc00;
+}
+
+.container > h2 {
+    font-size: 48px;
+    font-weight: 500;
+    margin-bottom: 0;
+}
+
+.container > h3 {
+    font-size: 1px;
+    font-weight: 300;
+}
+
+.product_preview {
+    padding: 50px;
+    gap: 20px;
+}
+
+.product_img img {
+    max-width: 150px;
+    max-height: 150px;
+}
+
+.product_info {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.product_title {
+    text-align: left;
+    font-size: 18px;
+    font-weight: 300;
+}
+
+.product_price {
+    font-size: 18px;
+    font-weight: 600;
+}
+
+footer {
+    background-color: #f4f4f4;
+    color: black;
+    text-align: center;
+    padding: 15px;
+    margin-top: 10px;
+    font-size: 14px;
+    box-shadow: 0px -4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.footer-container {
+    display: flex;
+    justify-content: center;
+    gap: 150px;
+    flex-wrap: wrap;
+}
+
+.footer-column {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.footer-column a {
+    color: black;
+    text-decoration: none;
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+}
+
+.footer-column a:hover {
+    text-decoration: underline;
+}
+
+.form-container {
+    width: 50%;
+    margin: 30px auto;
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.payment {
+    width: 50%;
+    margin: 30px auto;
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+    text-align: center;
+    color: #333;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    font-size: 14px;
+    color: #555;
+    margin-bottom: 5px;
+}
+
+input, textarea {
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+}
+
+button {
+    padding: 10px 20px;
+    background-color: #FFCC01;
+    color: black;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+}
+
+button:hover {
+    background-color: #0056b3;
+}

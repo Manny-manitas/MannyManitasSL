@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manny Manitas S.L.</title>
+    <link rel="stylesheet" href="ShoppingCart.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/png" href="img/Logo.png">
+</head>
+<body>
+    <div class="info-message">
+        ¡Contrata nuestros servicios YA llamando al +34 722 57 96 58! &emsp; Horario: Lunes a Viernes - 8.00-22.00
+    </div>
+    <header>
+        <a href="Index.html" class="logo_page">
+            <img src="img/Logo.png" alt="Logo Ferretería Manny Manitas" class="logo">
+            <h1>Manny Manitas S.L.</h1>
+        </a>
+        <div class="menu">
+            <a href="Index.html">Inicio</a>
+            <a href="Tienda.html">Tienda</a>
+        </div>
+    </header>
+
+    <div class="container">
+        <h1>Carrito de la compra</h1>
+    </div>
+
+    <div class="ShoppingList">
+        <div class="product_preview" id="cartContainer">
+            </div>
+    </div>
+
+    <div class="CartSummary">
+        <div class="TotalPrice">
+            <strong>Total: </strong><span id="totalPrice">0€</span>
+        </div>
+    </div>
+
+    <div class="ConfirmAndClearContainer">
+        <div class="ConfirmButtonContainer">
+            <a href="ShoppingConfirm.html" class="ConfirmButton">
+                Confirmar compra
+            </a>
+        </div>
+        <div class="ClearCartButtonContainer">
+            <button id="clearCartButton" class="ClearCartButton">
+                Limpiar carrito
+            </button>
+        </div>
+    </div>
+
+
+    <footer>
+        <p>© 2025 Ferretería Manny Manitas S.L. - Todos los derechos reservados.</p>
+    </footer>
+
+    <script>
+        const cart = JSON.parse(localStorage.getItem('cart')) || [];
+        const cartContainer = document.getElementById('cartContainer');
+        const totalPriceElement = document.getElementById('totalPrice');
+        const clearCartButton = document.getElementById('clearCartButton'); // Obtén la referencia al botón
+
+        if (cart.length === 0) {
+            cartContainer.innerHTML = '<p>No hay productos en el carrito.</p>';
+            totalPriceElement.innerText = '0€';
+        } else {
+            let totalPrice = 0;
+            cart.forEach((product, index) => {
+                const productDiv = document.createElement('div');
+                productDiv.classList.add('product_' + (index + 1));
+                productDiv.innerHTML = `
+                    <div class="product_img">
+                        <img src="${product.img}" alt="${product.title}">
+                    </div>
+                    <div class="product_title">${product.title}</div>
+                    <div class="product_price">${product.price}</div>
+                `;
+                cartContainer.appendChild(productDiv);
+
+                const price = parseFloat(product.price.replace('€', '').replace(',', '.'));
+                totalPrice += price;
+            });
+
+            totalPriceElement.innerText = `${totalPrice.toFixed(2)}€`;
+        }
+
+        function clearCart() {
+            localStorage.removeItem('cart');
+            window.location.reload();
+        }
+
+        clearCartButton.addEventListener('click', clearCart);
+    </script>
+</body>
+</html>
