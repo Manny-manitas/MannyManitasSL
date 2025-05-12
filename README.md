@@ -5,16 +5,16 @@ Este repositorio incluye los vídeos que resumen el trabajo realizado en las dis
 ---
 
 ## 🌐 Web – Izan de Geer  
-🎬 [Ver vídeo en YouTube](https://www.youtube.com/watch?v=IZAN_WEB_LINK)
+🎬 [Ver vídeo en YouTube]([https://www.youtube.com/watch?v=IZAN_WEB_LINK](https://youtu.be/SmZPNeESg-c))
 
 ---
 
 ## 💻 Aplicación Java – David Alonso  
-🎬 [Ver vídeo en YouTube](https://www.youtube.com/watch?v=DAVID_APP_LINK)
+🎬 [Ver vídeo en YouTube]([https://www.youtube.com/watch?v=DAVID_APP_LINK](https://youtu.be/C50qxl8uqE8))
 
 ---
 
-## 🗄️ Base de Datos – General  
+## 🗄️ Base de Datos – Alejandro Pérez 
 🎬 [Ver vídeo en YouTube](https://www.youtube.com/watch?v=DB_VIDEO_LINK)
 
 ---
