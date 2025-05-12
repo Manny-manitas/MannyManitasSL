@@ -15,12 +15,12 @@ Este repositorio incluye los vídeos que resumen el trabajo realizado en las dis
 ---
 
 ## 🗄️ Base de Datos – Alejandro Pérez 
-🎬 [Ver vídeo en YouTube](https://www.youtube.com/watch?v=DB_VIDEO_LINK)
+🎬 [Ver vídeo en YouTube](https://youtu.be/o8gZyCL8xhA)
 
 ---
 
 ## 📚 Memoria del Proyecto – César Portero  
-🎬 [Ver vídeo en YouTube](https://www.youtube.com/watch?v=CESAR_MEMORIA_LINK)
+🎬 [Ver vídeo en YouTube](https://youtu.be/PdrMAKiZowY)
 
 ---
 
