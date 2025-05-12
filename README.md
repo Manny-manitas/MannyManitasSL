@@ -5,12 +5,12 @@ Este repositorio incluye los vídeos que resumen el trabajo realizado en las dis
 ---
 
 ## 🌐 Web – Izan de Geer  
-🎬 [Ver vídeo en YouTube]([https://youtu.be/SmZPNeESg-c)])
+🎬 [Ver vídeo en YouTube](https://youtu.be/SmZPNeESg-c)
 
 ---
 
 ## 💻 Aplicación Java – David Alonso  
-🎬 [Ver vídeo en YouTube]([https://youtu.be/C50qxl8uqE8])
+🎬 [Ver vídeo en YouTube](https://youtu.be/C50qxl8uqE8)
 
 ---
 
